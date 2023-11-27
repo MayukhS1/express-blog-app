@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%- include('./partials/style.ejs') %>
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="blogs content">
+      <h2>Featured Blogs</h2>
+      <% if (blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+          <div class="blog">
+            <h3 class="title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+            <a href="/blogs/<%= blog.id %>" class="blog-link">Read More</a>
+          </div>
+        <% }) %>
+      <% }else{%>
+        <p>No blogs yet</p>
+      <% } %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

@@ -15,6 +15,18 @@ Start the server at http://localhost:3000
 
 List any APIs or routes exposed by the app
 
+## View Engine
+
+Express supports using template engines like EJS, Pug, Handlebars etc. to generate the HTML for responses dynamically.
+
+This app uses EJS as the view engine. The EJS templates are stored in the `views` folder.
+
+To set the view engine:
+
+```js
+app.set('view engine', 'ejs');
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
