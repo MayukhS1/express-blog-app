@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('./partials/style.ejs') %>
-    <title>Home Page</title>
-  </head>
-
-  <body>
+    <title>All Blogs</title>
+</head>
+<body>
     <%- include('./partials/header.ejs') %>
     <%- include('./partials/nav.ejs') %>
 
     <div class="blogs content">
-      <h2>Featured Blogs</h2>
+      <h2>All Blogs</h2>
       <% if (blogs.length > 0) { %>
         <% blogs.forEach(blog => { %>
           <div class="blog">
@@ -26,5 +25,6 @@
       <% } %>
     </div>
     <%- include('./partials/footer.ejs') %>
-  </body>
+    
+</body>
 </html>

@@ -7,7 +7,12 @@ app.set('view engine', 'ejs');
 
 //homepage route
 app.get('/', (req, res) => {
-    res.render('index');
+    const blogs = [
+        {title: 'How to master nodeJS', snippet: 'This is a blog about nodeJS. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+        {title: 'How to master React', snippet: 'This is a blog about React. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+        {title: 'How to master Angular', snippet: 'This is a blog about Angular. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+    ];
+    res.render('index', {blogs: blogs});
 });
 
 //re-direct to homepage
@@ -18,6 +23,16 @@ app.get('/home', (req, res) => {
 //about page route
 app.get('/about', (req, res) => {
     res.render('about');
+});
+
+//all blogs page route
+app.get('/blogs', (req, res) => {
+    const blogs = [
+        {title: 'How to master nodeJS', snippet: 'This is a blog about nodeJS. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+        {title: 'How to master React', snippet: 'This is a blog about React. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+        {title: 'How to master Angular', snippet: 'This is a blog about Angular. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.'},
+    ];
+    res.render('blogs', {blogs: blogs});
 });
 
 app.get('/create', (req, res) => {

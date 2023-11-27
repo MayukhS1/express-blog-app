@@ -3,23 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%- include('./partials/style.ejs') %>
     <title>About Us</title>
   </head>
 
   <body>
-    <header>
-      <h1>My Blog</h1>
-      <p>A place to share my thoughts and ideas</p>
-
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/blogs">Blogs</a></li>
-          <li><a href="/create">Create a Blog</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
 
     <div class="create-blog content">
       <form>
@@ -32,5 +22,6 @@
         <button>Submit</button>
       </form>
     </div>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>
