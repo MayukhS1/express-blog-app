@@ -26,6 +26,27 @@ To set the view engine:
 ```js
 app.set('view engine', 'ejs');
 ```
+# Middleware in Express
+
+Middleware in Express.js refers to functions that execute during the request-response cycle. Middleware functions have access to the request and response objects, and the next middleware function in the application's request-response cycle.
+
+Some common uses of middleware in Express include:
+
+* Logging - Logging requests, errors, etc.
+* Authentication - Verifying user credentials before allowing access to routes.
+* Error handling - Catching and handling errors in the application.
+* Parsing - Parsing request bodies, like JSON parsing.
+* Serving static files - Hosting static files like images, CSS, etc.
+
+Middleware functions are registered using app.use() and take the form:
+
+```js
+app.use(function(req, res, next) {
+  // ... perform some operation
+  next(); // pass control to next middleware function
+});
+```
+The next() function passes control to the next middleware function. Middleware can perform operations on the request and response, and optionally call next() to move to the next middleware. Multiple middleware functions can be chained together and execute sequentially.
 
 ## Contributing
 

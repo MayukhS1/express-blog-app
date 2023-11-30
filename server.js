@@ -5,6 +5,17 @@ const port = 3000;
 //setup view engine
 app.set('view engine', 'ejs');
 
+//middleware example
+app.use(function(req, res, next) {
+    console.log('Time:', Date.now());
+    console.log('Method:', req.method);
+    console.log('Path:', req.path);
+    next(); // if next() is not called, the request will be left hanging
+});
+
+// load static files through middleware
+app.use(express.static('public'));
+
 //homepage route
 app.get('/', (req, res) => {
     const blogs = [
