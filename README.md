@@ -26,7 +26,7 @@ To set the view engine:
 ```js
 app.set('view engine', 'ejs');
 ```
-# Middleware in Express
+## Middleware in Express
 
 Middleware in Express.js refers to functions that execute during the request-response cycle. Middleware functions have access to the request and response objects, and the next middleware function in the application's request-response cycle.
 
