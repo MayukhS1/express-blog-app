@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./partials/style.ejs') %>
+    <title>All Blogs</title>
+  </head>
+
+  <body>
+    <%- include('./partials/header.ejs') %> 
+    <%- include('./partials/nav.ejs') %>
+    <% if (blog){ %>
+    <div class="blog">
+      <h2 class="title"><%= blog.title %></h2>
+      <p class="snippet"><%= blog.body %></p>
+    </div>
+    <% }else{%>
+    <p>Blog does not exist. Something went wrong!</p>
+    <% } %> 
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
